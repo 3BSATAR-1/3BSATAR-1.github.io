@@ -198,3 +198,49 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem
   html{scroll-behavior:auto}
   .word .solid,.portrait,.word .line{animation:none}
 }
+  /* =========================
+   MOBILE - REMOVE INFO CARDS
+   ========================= */
+
+@media (max-width: 720px) {
+
+  .who,
+  .socials,
+  .who h1,
+  .who p,
+  .socials a {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .who {
+    position: absolute !important;
+    left: 1.25rem !important;
+    bottom: 8rem !important;
+    z-index: 10 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .socials {
+    position: absolute !important;
+    left: 1.25rem !important;
+    right: auto !important;
+    bottom: 2rem !important;
+    z-index: 10 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: .7rem !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .socials a {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+}
