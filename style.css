@@ -54,8 +54,9 @@ h1,h2,h3,p{margin:0}
 @media (max-width:720px){
   .who,.socials{position:static}
   .hero{display:flex;flex-direction:column;justify-content:flex-end;padding:0 1.25rem 1.5rem;gap:1.25rem}
-  .word{top:36%;width:96vw}
-  .portrait{height:min(70%,120vw);width:min(70vh,120vw)}
+  .hero{--p:min(120vw,70vh)}
+  .word{top:auto;bottom:calc(var(--p) * .94);width:96vw;transform:translate(-50%,50%)}
+  .portrait{height:var(--p);width:var(--p)}
   .who,.socials{z-index:4;align-self:flex-start;text-shadow:0 0 6px var(--bg),0 0 14px var(--bg),0 0 22px var(--bg)}
   .socials{gap:.6rem}
 }
