@@ -28,15 +28,16 @@ h1,h2,h3,p{margin:0}
 .dots{position:absolute;top:0;right:0;width:clamp(70px,11vw,160px);color:var(--ink);pointer-events:none}
 
 /* hero */
-.hero{position:relative;min-height:max(100svh,560px);overflow:hidden;isolation:isolate}
-.word{position:absolute;left:50%;top:47%;width:min(88vw,1500px);transform:translate(-50%,-50%);aspect-ratio:1300/400}
-.word svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.hero{position:relative;min-height:560px;min-height:100vh;min-height:max(100svh,560px);overflow:hidden;isolation:isolate}
+.word{position:absolute;left:50%;top:47%;width:88vw;width:min(88vw,1500px);aspect-ratio:1300/400;transform:translate(-50%,-50%)}
+@supports not (aspect-ratio:1/1){.word{height:0;padding-bottom:27.08%}}
+.word svg{position:absolute;top:0;left:0;right:0;bottom:0;width:100%;height:100%;overflow:visible}
 .word .solid{z-index:1}
 .word .line{z-index:3}
 .word text{font-family:var(--display);font-size:380px}
 .word .solid text{fill:var(--ink)}
 .word .line text{fill:none;stroke:var(--ink);stroke-width:2.2}
-.portrait{position:absolute;z-index:2;bottom:0;left:50%;transform:translateX(-50%);height:min(92%,150vw);aspect-ratio:1;background:url(../images/portrait.webp) center bottom/contain no-repeat}
+.portrait{position:absolute;z-index:2;bottom:0;left:50%;transform:translateX(-50%);height:min(92%,150vw);width:min(92vh,150vw);background:url(../images/portrait.webp) center bottom/contain no-repeat}
 .who{position:absolute;z-index:4;left:clamp(1.25rem,5.6vw,5rem);bottom:clamp(1.5rem,6vh,4rem)}
 .who h1{font-family:var(--display);font-weight:400;font-size:clamp(1.6rem,2.6vw,2.4rem);letter-spacing:.01em;line-height:1.1}
 .who p{font-weight:700;font-size:clamp(1rem,1.5vw,1.3rem);letter-spacing:.06em;margin-top:.35rem}
@@ -54,8 +55,8 @@ h1,h2,h3,p{margin:0}
   .who,.socials{position:static}
   .hero{display:flex;flex-direction:column;justify-content:flex-end;padding:0 1.25rem 1.5rem;gap:1.25rem}
   .word{top:36%;width:96vw}
-  .portrait{height:min(70%,120vw)}
-  .who,.socials{z-index:4}
+  .portrait{height:min(70%,120vw);width:min(70vh,120vw)}
+  .who,.socials{z-index:4;align-self:flex-start;text-shadow:0 0 6px var(--bg),0 0 14px var(--bg),0 0 22px var(--bg)}
   .socials{gap:.6rem}
 }
 
